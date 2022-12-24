@@ -1,8 +1,28 @@
 ﻿using ConsoleApp3.session1;
 using TT2203E.session1;
+using TT2203E.session3;
 public class Program
-{
+{   
     static void Main(string[] args)
+    {
+        try
+        {
+            int x = 10;
+            int y = 0;
+            throw new Exception("Y bang 0 mat roi");
+            float z = x / y;
+
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+
+        }
+    }
+    static void Main2(string[] args)
     {
         Human h = new Human();
         h.Run();
