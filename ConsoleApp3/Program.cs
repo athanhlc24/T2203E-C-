@@ -2,10 +2,29 @@
 using TT2203E.session1;
 using TT2203E.session3;
 using TT2203E.session3.assignment;
-
+using TT2203E.session4;
 public class Program
-{
+{   
     static void Main(string[] args)
+    {
+        StringToVoid stv = new StringToVoid(showMessage);
+        StringToVoid stv2 = new StringToVoid(DemoDelegate.SayHello);//static
+        StringToVoid stv3 = new StringToVoid(new DemoDelegate().ShowInfo);//method
+        stv += DemoDelegate.SayHello;
+        stv += new DemoDelegate().ShowInfo;
+        stv += stv3;
+        stv("xin chao cac ban");
+    } 
+    static void showMessage(string msg)
+    {
+        Console.WriteLine(msg);
+
+    }
+    static string GetMessage(string s)
+    {
+        return s;
+    }
+        static void Main4(string[] args)
     {
         PhoneBook pb = new PhoneBook();
         pb.InsertPhone("Nam", "289348239");
@@ -13,13 +32,13 @@ public class Program
         pb.InsertPhone("Nam4", "333444444");
         pb.InsertPhone("Nam5", "333333333");
         pb.InsertPhone("Nam6", "222222222");
-        
 
-        foreach(PhoneNumber p in pb.PhoneList)
+        pb.Sort();
+        foreach (PhoneNumber p in pb.PhoneList)
         {
             Console.WriteLine(p.ToString());
         }
-        pb.Sort();
+        
     }
     static void Main3(string[] args)
     {
