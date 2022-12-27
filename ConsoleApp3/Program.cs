@@ -1,9 +1,27 @@
 ﻿using ConsoleApp3.session1;
 using TT2203E.session1;
 using TT2203E.session3;
+using TT2203E.session3.assignment;
+
 public class Program
-{   
+{
     static void Main(string[] args)
+    {
+        PhoneBook pb = new PhoneBook();
+        pb.InsertPhone("Nam", "289348239");
+        pb.InsertPhone("Nam","111111111111");
+        pb.InsertPhone("Nam4", "333444444");
+        pb.InsertPhone("Nam5", "333333333");
+        pb.InsertPhone("Nam6", "222222222");
+        
+
+        foreach(PhoneNumber p in pb.PhoneList)
+        {
+            Console.WriteLine(p.ToString());
+        }
+        pb.Sort();
+    }
+    static void Main3(string[] args)
     {
         try
         {
