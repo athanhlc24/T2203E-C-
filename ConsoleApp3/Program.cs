@@ -8,8 +8,13 @@ public class Program
     
 {   static void Main(string[] args)
     {
+        Fetch();
+    }
+    static async void Fetch()
+    {
         CallAPI ca = new CallAPI();
-        ca.FetchData();
+        Product s = await ca.FetchData();
+        Console.WriteLine(s);
     }
     static void Main6(string[] args)
     {

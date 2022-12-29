@@ -10,7 +10,7 @@ namespace TT2203E.session5
     public class CallAPI
     {
         public CallAPI() { }
-        public async Task<string> FetchData()//xử lí bất đồng bộ 
+        public async Task<Product> FetchData()//xử lí bất đồng bộ 
         {
             string url = "https://dummyjson.com/products/1";
             HttpClient client= new HttpClient();
@@ -18,10 +18,10 @@ namespace TT2203E.session5
             if(rs.StatusCode == HttpStatusCode.OK)
             {
                 string responseText = await rs.Content.ReadAsStringAsync();
-                Console.WriteLine(responseText);
+                
             }
 
-            return "";
+            return null;
         }
     }
 }
