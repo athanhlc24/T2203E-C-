@@ -13,7 +13,11 @@ public class Program
         stv += DemoDelegate.SayHello;
         stv += new DemoDelegate().ShowInfo;
         stv += stv3;
-        stv("xin chao cac ban");
+        stv("xin chao cac ban");//showMessage("xin chao cac ban");
+
+
+        DemoEvent de = new DemoEvent();
+        de.Invoke();
     } 
     static void showMessage(string msg)
     {
