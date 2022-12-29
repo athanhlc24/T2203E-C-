@@ -11,7 +11,7 @@ public class TinhTienDien
 	public int KWVuotDinhMuc { get; set; }
 	public int DonGiaMoi { get; set; }
 	public int ThanhTien { get; set; }
-	public int KhachHangVN()
+	public int KhachHangVN(int SoLuong, int DinhMuc,int DonGia,int DonGiaMoi)
 	{
 		if(Soluong < DinhMuc)
 		{
@@ -22,7 +22,7 @@ public class TinhTienDien
 			return ThanhTien = DonGia * DinhMuc + (Soluong - DinhMuc) * DonGiaMoi;
 		}
 	}
-	public int KhachHangNcNgoai()
+	public int KhachHangNcNgoai(int SoLuong, int DonGia)
 	{
 		return ThanhTien = Soluong * DonGia; 
 	}
