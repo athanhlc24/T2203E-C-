@@ -15,16 +15,16 @@ public class TinhTienDien
 	{
 		if(Soluong < DinhMuc)
 		{
-			return ThanhTien = Soluong * DonGia;
+			return ThanhTien = SoLuong * DonGia;
 		}
 		else
 		{
-			return ThanhTien = DonGia * DinhMuc + (Soluong - DinhMuc) * DonGiaMoi;
+			return ThanhTien = DonGia * DinhMuc + (SoLuong - DinhMuc) * DonGiaMoi;
 		}
 	}
 	public int KhachHangNcNgoai(int SoLuong, int DonGia)
 	{
-		return ThanhTien = Soluong * DonGia; 
+		return ThanhTien = SoLuong * DonGia; 
 	}
 
 }
