@@ -1,12 +1,24 @@
 ﻿using ConsoleApp3.session1;
+using TT2203E.Assignemnt3;
 using TT2203E.session1;
 using TT2203E.session3;
 using TT2203E.session3.assignment;
 using TT2203E.session4;
 using TT2203E.session5;
 public class Program
-    
-{   static void Main(string[] args)
+
+{
+    static void Main(string[] args)
+    {
+        FetchWeather();
+    }
+    static async void FetchWeather()
+    {
+        CallAPIWeatherMap ca = new CallAPIWeatherMap();
+        Product s = await ca.FetchDataWeather();
+        Console.WriteLine(s.ToString());
+    }
+    static void Main7(string[] args)
     {
         Fetch();
     }
