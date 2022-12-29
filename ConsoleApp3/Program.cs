@@ -5,10 +5,16 @@ using TT2203E.session3;
 using TT2203E.session3.assignment;
 using TT2203E.session4;
 using TT2203E.session5;
+using TT2203E.Assignment2;
 public class Program
 
-{
-    static void Main(string[] args)
+{   static void Main(string[] args)
+    {
+        TinhTienDien ttd = new TinhTienDien();
+        ttd.KhachHangVN(30, 50, 2000, 20);
+
+    }
+    static void Main8(string[] args)
     {
         FetchWeather();
     }
@@ -145,6 +151,7 @@ public class Program
     }
     static void Main2(string[] args)
     {
+        
         Human h = new Human();
         h.Run();
         h.Age= 1;

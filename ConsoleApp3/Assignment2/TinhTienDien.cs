@@ -1,5 +1,5 @@
 ﻿using System;
-
+namespace TT2203E.Assignment2;
 public class TinhTienDien	
 {
 	public TinhTienDien()
@@ -15,7 +15,9 @@ public class TinhTienDien
 	{
 		if(Soluong < DinhMuc)
 		{
-			return ThanhTien = SoLuong * DonGia;
+			 ThanhTien = SoLuong * DonGia;
+			Console.WriteLine(ThanhTien);
+			return 0;
 		}
 		else
 		{
