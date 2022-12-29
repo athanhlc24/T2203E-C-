@@ -14,7 +14,7 @@ public class Program
     {
         CallAPI ca = new CallAPI();
         Product s = await ca.FetchData();
-        Console.WriteLine(s);
+        Console.WriteLine(s.ToString());
     }
     static void Main6(string[] args)
     {

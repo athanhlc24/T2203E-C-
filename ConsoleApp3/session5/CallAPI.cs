@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using Newtonsoft.Json;
 
 namespace TT2203E.session5
 {
@@ -18,6 +19,8 @@ namespace TT2203E.session5
             if(rs.StatusCode == HttpStatusCode.OK)
             {
                 string responseText = await rs.Content.ReadAsStringAsync();
+                Product p = JsonConvert.DeserializeObject<Product>(responseText);
+                return p;
                 
             }
 
