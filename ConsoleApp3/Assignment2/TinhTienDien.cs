@@ -5,9 +5,9 @@ public class TinhTienDien
 	public TinhTienDien()
 	{
 	}
-	public int DinhMuc { get; set; };
-	public int Soluong { get; set; };
-	public int DonGia { get; set; };
+	public int DinhMuc { get; set; }
+	public int Soluong { get; set; }
+	public int DonGia { get; set; }
 	public int KWVuotDinhMuc { get; set; }
 	public int DonGiaMoi { get; set; }
 	public int ThanhTien { get; set; }

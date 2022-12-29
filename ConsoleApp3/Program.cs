@@ -3,9 +3,72 @@ using TT2203E.session1;
 using TT2203E.session3;
 using TT2203E.session3.assignment;
 using TT2203E.session4;
+using TT2203E.session5;
 public class Program
-{   
-    static void Main(string[] args)
+    
+{   static void Main(string[] args)
+    {
+        CallAPI ca = new CallAPI();
+        ca.FetchData();
+    }
+    static void Main6(string[] args)
+    {
+       /* Thread t1 = new Thread(ThreadRun);
+        Thread t2 = new Thread(ThreadRunParam);
+        t2.IsBackground = true;// CHẠY NỀN
+        t1.Start();
+        t2.Start("T2203E");*/
+       Number num = new Number() { X=0, Y=0};
+        Thread n1 = new Thread(ThreadLock);
+        Thread n2 = new Thread(ThreadLock);
+        
+        n1.Start(num);
+        n2.Start(num);
+        
+    }
+    static void ThreadRun()
+    {
+        for(int i = 0;i<20;i++)
+        {
+            Console.WriteLine("i= " + i);
+            try
+            {
+                Thread.Sleep(1000);
+            }
+            catch(Exception ex) { }
+        }
+    }
+    static void ThreadRunParam(object msg)
+    {
+        for (int i = 0; i < 30; i++)
+        {
+            Console.WriteLine("i= " + i+"msg= "+msg);
+            try
+            {
+                Thread.Sleep(1000);
+            }
+            catch (Exception ex) { }
+        }
+    }
+    static void ThreadLock(object o)
+    {
+        Number n = (Number)o;
+        for(int i = 0; i < 20; i++)
+        {
+            lock(n)// chạy xong xong
+            {
+                n.ChangeXY();
+                n.PrintXY();
+            }
+            
+            try
+            {
+                Thread.Sleep(1000);
+            }catch(Exception e) { }
+        }
+    }
+  
+    static void Main5(string[] args)
     {
         StringToVoid stv = new StringToVoid(showMessage);
         StringToVoid stv2 = new StringToVoid(DemoDelegate.SayHello);//static
