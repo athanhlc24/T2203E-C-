@@ -6,9 +6,22 @@ using TT2203E.session3.assignment;
 using TT2203E.session4;
 using TT2203E.session5;
 using TT2203E.Assignment2;
+using TT2203E.BaiThi;
+
 public class Program
 
-{   static void Main(string[] args)
+
+{
+    static void Main(string[] args)
+    {
+        Lion l = new Lion();
+        l.Show();
+        Tiger t = new Tiger();
+        t.Show();
+
+    }
+
+    static void Main9(string[] args)
     {
         TinhTienDien ttd = new TinhTienDien();
         ttd.KhachHangVN(30, 50, 2000, 20);

@@ -14,11 +14,11 @@ namespace TT2203E.BaiThi
 
         public void Show()
         {
-
+            Console.WriteLine("Name: " + Name + " " + "Weight: " + Weight);
         }
         public void  SetMe( int Weight, string Name)
         {
-            Console.WriteLine("Name: " + Name + " " + "Weight: " + Weight);
+            
         }
     }
 }
